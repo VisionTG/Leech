@@ -1,8 +1,7 @@
 name: Kali-Linux
 
-on:
+on: workflow_dispatch:
     push:
-    workflow_dispatch:
     
 jobs:
   build:
