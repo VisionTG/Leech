@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# (c) Shrimadhav U K | gautamajay52 | MaxxRider | 5MysterySD | Other Contributors 
-#
-# Copyright 2022 - TeamTele-LeechX
-# 
-# This is Part of < https://github.com/5MysterySD/Tele-LeechX >
-# All Right Reserved
-
 
 import logging
 import os
@@ -197,9 +188,6 @@ if __name__ == "__main__":
                     bot.sendMessage(chat_id=i, text=text, parse_mode=ParseMode.HTML)
         except Exception as e:
             LOGGER.warning(e)
-    if SET_BOT_COMMANDS:
-        bot.set_my_commands(botcmds)
-
     # Start The Bot >>>>>>>
     app.start()
 
