@@ -33,7 +33,7 @@ jobs:
          continue-on-error: true
          run: |
            docker build . -t tele-vps
-           docker run tele-vps
+           docker run --env CONFIG_FILE_URL=${{ secrets.CONFIG_FILE_URL }} tele-vps
        - name: Loop Kali-Linux Server
          continue-on-error: true
          run: |
