@@ -119,8 +119,8 @@ if SET_BOT_COMMANDS:
             f'{BotCommands.MediaInfoCommand}',
             '🆔️ [Reply] Get Telegram Files Media Info',
         ),
-        ('setpre', '🔠 <Text> Save Custom Prefix for Uploads'),
-        ('setcap', '🔣 <Text> Save Custom Caption for Uploads'),
+        ('set_prefix', '🔠 <Text> Save Custom Prefix for Uploads'),
+        ('set_caption', '🔣 <Text> Save Custom Caption for Uploads'),
         ('parser', '🧮 <URL> Get Bypassed Link After Parsing !!'),
         ('imdb', '🎬 [Title] Get IMDb Details About It !!'),
         ('set_template', '📋 [HTML] Set IMDb Custom Template for Usage!!'),
@@ -152,7 +152,7 @@ async def start(client, message):
 ┃
 ┣ <b>NOTE:</b> <code>All The Uploaded Leeched Contents By You Will Be Sent Here In Your Private Chat From Now.</code>
 ┃
-┗━♦️ℙ𝕠𝕨𝕖𝕣𝕖𝕕 𝔹𝕪 {UPDATES_CHANNEL}♦️
+┗━♦️ℙ𝕠𝕨𝕖𝕣𝕖𝕕 𝔹𝕪: @TGFilmZone♦️
 '''
     if message.chat.type == enums.ChatType.PRIVATE:
         await message.reply_text(
@@ -450,14 +450,14 @@ if __name__ == "__main__":
     ##############################################################################
     prefixx_handler = MessageHandler(
         prefix_set,
-        filters=filters.command(["setpre", f"setpre@{bot.username}"])
+        filters=filters.command(["set_prefix", f"setpre@{bot.username}"])
         & filters.chat(chats=AUTH_CHANNEL),
     )
     app.add_handler(prefixx_handler)
     ##############################################################################
     captionn_handler = MessageHandler(
         caption_set,
-        filters=filters.command(["setcap", f"setcap@{bot.username}"])
+        filters=filters.command(["set_caption", f"setcap@{bot.username}"])
         & filters.chat(chats=AUTH_CHANNEL),
     )
     app.add_handler(captionn_handler)
